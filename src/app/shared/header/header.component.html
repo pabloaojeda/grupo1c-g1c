@@ -2,11 +2,121 @@
     <div class="container-fluid">
         <a class="navbar-brand ps-3" href="index.html">PIL Money</a>
         <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Registrarse</a>
+            <li class="nav-item px-1">
+                <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ventanaModal">Registrarse</button>
+
+                <div class="modal fade" id="ventanaModal" tabindex="-1" role="dialog" aria-labelledby="etiquetaReg" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 id="etiquetaReg"> Registrarse</h5>
+                                <button class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+
+                                    <div class="row g-3 mb-2">
+                                        <div class="col">
+                                            <label for="" class="form-label">Nombre</label>
+                                            <input type="text" class="form-control" aria-label="First name">
+                                        </div>
+                                        <div class="col">
+                                            <label for="" class="form-label">Apellido</label>
+                                            <input type="text" class="form-control" aria-label="Last name">
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-2">
+                                        <label for="exampleInputEmail1" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    </div>
+
+                                    <div class="mb-2">
+                                        <label for="inputPassword6" class="col-form-label">
+                                            Contraseña
+                                        </label>
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                                            </div>
+                                            <div class="col-auto">
+                                                <span id="passwordHelpInline" class="form-text">
+                                                    Must be 8-20 characters long.
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-2">
+                                        <label for="inputPassword6" class="col-form-label">
+                                            Repita la contraseña
+                                        </label>
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                                            </div>
+                                            <div class="col-auto">
+                                                <span id="passwordHelpInline" class="form-text">
+                                                    Must be 8-20 characters long.
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-2">
+                                        <label for="" class="form-label">DNI</label>
+                                        <input type="number" class="form-control" id="InputDni">
+                                    </div>
+                                        
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                        <label class="form-check-label" for="invalidCheck">
+                                          Acepto los terminos y condiciones.
+                                        </label>
+                                        <div class="invalid-feedback">
+                                          You must agree before submitting.
+                                        </div>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary mt-2">Registrarme</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Iniciar sesion</a>
+            <li class="nav-item px-1">
+
+                <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ventanaLogin">Iniciar Sesion</button>
+                <div class="modal fade" id="ventanaLogin" tabindex="-1" role="dialog" aria-labelledby="etiquetaReg" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 id="etiquetaReg"> Iniciar Sesion</h5>
+                                <button class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                      <label for="exampleInputEmail1" class="form-label">Email</label>
+                                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    </div>
+                                    <div class="mb-3">
+                                      <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                                      <input type="password" class="form-control" id="exampleInputPassword1">
+                                    </div>
+                                    <div class="mb-3 form-check">
+                                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                      <label class="form-check-label" for="exampleCheck1">Recuerda mi cuenta</label>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Aceptar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </li>
         </ul>
     </div>
