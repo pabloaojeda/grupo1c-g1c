@@ -8,6 +8,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FormLoginComponent } from './pages/form-login/form-login.component';
 import { FormRegisterComponent } from './pages/form-register/form-register.component';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,10 @@ import { FormRegisterComponent } from './pages/form-register/form-register.compo
     FooterComponent,
     HomeComponent,
     FormLoginComponent,
-    FormRegisterComponent
+    FormRegisterComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
