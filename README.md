@@ -7,7 +7,7 @@
    <a href="https://github.com/MatGP20/PilMoney1C">Repositorio Github</a>
   </h2>
   
-   <p> El grupo 1C esta comformado por :
+   <p> El grupo 1C está conformado por :
   <ul>  
     <li> Matias Gabriel Palacios   <a href="https://www.linkedin.com/in/matiasgpalacio/">LinkedIn</a> ----  <a href="https://github.com/MatGP20"> Github</a> </li>
     <li> Pablo Andrés Ojeda   <a href="https://www.linkedin.com/in/pabloaojeda/">LinkedIn</a>  ---- <a href="https://github.com/pabloaojeda"> Github</a> </li>
