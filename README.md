@@ -1,27 +1,30 @@
 # PilWallet
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.12.
+<h1> IMPORTANTE, LEER ANTES DE DESCARGAR EL REPOSITORIO!! </h1>
 
-## Development server
+  <h2> Debido a problemas con el repositorio, la aplicación se realizo en el siguiente link! 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+   <a href="https://github.com/MatGP20/PilMoney1C">Repositorio Github</a>
+  </h2>
 
-## Build
+   <p> El grupo 1C esta comformado por :
+  <ul>  
+    <li> Matias Gabriel Palacio   <a href="https://www.linkedin.com/in/matiasgpalacio/">LinkedIn</a> ----  <a href="https://github.com/MatGP20"> Github</a> </li>
+    <li> Pablo Andrés Ojeda   <a href="https://www.linkedin.com/in/pabloaojeda/">LinkedIn</a>  ---- <a href="https://github.com/pabloaojeda"> Github</a> </li>
+  </ul>
+</p>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+  <h2> En la wiki pueden encontrar los links a las PPPs, figma, y jamboards utilizadas durante la capacitacion </h2>
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+  <p> Billetera Virtual realizada en la capacitacion PIL del gobierno de Córdoba, dictada por los profesores:
+  <ul>  
+    <li> Profesora Ivana Rojas Córsico </li>
+    <li> Profesor Luis Chanquía </li>
+  </ul>
+</p>
