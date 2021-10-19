@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/PIL-Money'),
+      dir: require('path').join(__dirname, './coverage/PilWallet'),
       subdir: '.',
       reporters: [
         { type: 'html' },

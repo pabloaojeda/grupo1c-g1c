@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PilWalletModelStoreContainer" CdmEntityContainer="PilWalletEntities">
+    <EntitySetMapping Name="Clientes">
+      <EntityTypeMapping TypeName="PilWalletModel.Cliente">
+        <MappingFragment StoreEntitySet="Cliente">
+          <ScalarProperty Name="Cuit_Cuil" ColumnName="Cuit/Cuil" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="ID_Localidad" ColumnName="ID_Localidad" />
+          <ScalarProperty Name="Foto_Frontal" ColumnName="Foto_Frontal" />
+          <ScalarProperty Name="DNI_delante" ColumnName="DNI_delante" />
+          <ScalarProperty Name="DNI_detras" ColumnName="DNI_detras" />
+          <ScalarProperty Name="Domicilio" ColumnName="Domicilio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cuentas">
+      <EntityTypeMapping TypeName="PilWalletModel.Cuenta">
+        <MappingFragment StoreEntitySet="Cuenta">
+          <ScalarProperty Name="ID_Cuenta" ColumnName="ID_Cuenta" />
+          <ScalarProperty Name="Cuit_Cuil" ColumnName="Cuit/Cuil" />
+          <ScalarProperty Name="ID_Tipo_Cuenta" ColumnName="ID_Tipo_Cuenta" />
+          <ScalarProperty Name="ID_movimiento" ColumnName="ID_movimiento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Localidads">
+      <EntityTypeMapping TypeName="PilWalletModel.Localidad">
+        <MappingFragment StoreEntitySet="Localidad">
+          <ScalarProperty Name="ID_Localidad" ColumnName="ID_Localidad" />
+          <ScalarProperty Name="Localidad1" ColumnName="Localidad" />
+          <ScalarProperty Name="Codigo_Postal" ColumnName="Codigo_Postal" />
+          <ScalarProperty Name="ID_Provincia" ColumnName="ID_Provincia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Movimientos">
+      <EntityTypeMapping TypeName="PilWalletModel.Movimiento">
+        <MappingFragment StoreEntitySet="Movimientos">
+          <ScalarProperty Name="ID_movimiento" ColumnName="ID_movimiento" />
+          <ScalarProperty Name="ID_tipo_Movimiento" ColumnName="ID_tipo_Movimiento" />
+          <ScalarProperty Name="Descripción" ColumnName="Descripción" />
+          <ScalarProperty Name="Fecha_Hora" ColumnName="Fecha_Hora" />
+          <ScalarProperty Name="Monto" ColumnName="Monto" />
+          <ScalarProperty Name="ID_cuenta_origen" ColumnName="ID_cuenta_origen" />
+          <ScalarProperty Name="ID_cuenta_final" ColumnName="ID_cuenta_final" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Provincias">
+      <EntityTypeMapping TypeName="PilWalletModel.Provincia">
+        <MappingFragment StoreEntitySet="Provincia">
+          <ScalarProperty Name="ID_Provincia" ColumnName="ID_Provincia" />
+          <ScalarProperty Name="Provincia1" ColumnName="Provincia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="PilWalletModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo_Cuenta">
+      <EntityTypeMapping TypeName="PilWalletModel.Tipo_Cuenta">
+        <MappingFragment StoreEntitySet="Tipo_Cuenta">
+          <ScalarProperty Name="ID_Tipo_Cuenta" ColumnName="ID_Tipo_Cuenta" />
+          <ScalarProperty Name="Tipo_Cuenta1" ColumnName="Tipo_Cuenta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo_Movimientos">
+      <EntityTypeMapping TypeName="PilWalletModel.Tipo_Movimientos">
+        <MappingFragment StoreEntitySet="Tipo_Movimientos">
+          <ScalarProperty Name="ID_tipo_Movimiento" ColumnName="ID_tipo_Movimiento" />
+          <ScalarProperty Name="Tipo_Movimiento" ColumnName="Tipo_Movimiento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="PilWalletModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="PilWalletModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="PilWalletModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="PilWalletModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PilWalletModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="PilWalletModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PilWalletModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="PilWalletModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="PilWalletModel.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

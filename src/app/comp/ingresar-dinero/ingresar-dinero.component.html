@@ -1,0 +1,122 @@
+<body class="bg-light my-5">
+  <div class="container col-12 col-sm-10 col-md-6">
+    <div class="row card border-4 p-4">
+      <div>
+        <form class="needs-validation" novalidate>
+          <h4 class="mb-3 text-muted">INGRESAR DINERO</h4>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Seleccione el tipo de cuenta</option>
+            <option value="1">Cuenta en Pesos</option>
+            <option value="2" disabled>Cuenta en Dolares (En Construccion)</option>
+            <option value="3" disabled>Cuenta en Bitcoin (En Construccion)</option>
+          </select>
+
+          <div class="d-block my-3">
+            <div class="custom-control custom-radio">
+              <input
+                id="credit"
+                name="paymentMethod"
+                type="radio"
+                class="custom-control-input"
+                checked
+                required
+              />
+              <label class="custom-control-label" for="credit"
+                >Tarjeta de crédito</label
+              >
+            </div>
+            <div class="custom-control custom-radio">
+              <input
+                id="debit"
+                name="paymentMethod"
+                type="radio"
+                class="custom-control-input"
+                required
+              />
+              <label class="custom-control-label" for="debit"
+                >Tarjeta de débito</label
+              >
+            </div>
+            <div class="custom-control custom-radio">
+              <input
+                id="paypal"
+                name="paymentMethod"
+                type="radio"
+                class="custom-control-input"
+                required
+              />
+              <label class="custom-control-label" for="paypal">Paypal</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="cc-name">Nombre </label>
+              <input
+                type="text"
+                class="form-control"
+                id="cc-name"
+                placeholder=""
+                required
+              />
+              <small class="text-muted">Nombre en la tarjeta</small>
+              <div class="invalid-feedback">Campo requerido</div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="cc-number">Número de tarjeta</label>
+              <input
+                type="text"
+                class="form-control"
+                id="cc-number"
+                placeholder="**** **** **** ****"
+                required
+              />
+              <div class="invalid-feedback">Campo requerido</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3 mb-3">
+              <label for="cc-expiration">Vencimiento</label>
+              <input
+                type="text"
+                class="form-control"
+                id="cc-expiration"
+                placeholder="MM/AA"
+                required
+              />
+              <div class="invalid-feedback">Campo requerido</div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="cc-expiration">CVV</label>
+              <input
+                type="password"
+                class="form-control"
+                id="cc-cvv"
+                placeholder="***"
+                required
+              />
+              <div class="invalid-feedback">Campo obligatorio</div>
+            </div>
+          </div>
+          <div class="input-group-prepend">
+            <span class="input-group-text">AR$</span>
+          </div> 
+          <input
+            type="number"
+            class="form-control"
+            id="balance"
+            placeholder="12000000.00"
+          />
+
+          <button
+            class="btn btn-dark btn-lg btn-block mt-4"
+            type="submit"
+            routerLink="../"
+            [disabled]="false"
+          >
+            Depositar
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>

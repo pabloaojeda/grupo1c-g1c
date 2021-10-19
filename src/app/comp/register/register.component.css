@@ -1,0 +1,79 @@
+input {
+  background-color: #87c0cd;
+  border-radius: 20px;
+  /* margin-bottom: 10px; */
+}
+select {
+  background-color: #87c0cd;
+  border-radius: 20px;
+}
+
+.btn {
+  background: #113f67;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+
+  /* identical to box height */
+
+  color: #ffffff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  /* width: 100%; */
+}
+body {
+  background: #f3f9fb;
+}
+
+.button {
+  /* position: relative; */
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.btn {
+  width: 50%;
+  border-radius: 5rem;
+}
+
+/* .input-group-text {
+  height: 4vh;
+} */
+
+.examinar {
+  margin-bottom: 3vh;
+  margin-top: 3vh;
+}
+
+label {
+  font-size: 18px;
+}
+
+.titulo-register {
+  display: flex;
+  justify-content: center;
+}
+
+.padre {
+  /* width: 40vw; */
+  height: 110vh;
+  border: 4px solid;
+  border-radius: 20px;
+}
+
+.modal-title {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+
+  /* identical to box height */
+
+  color: #113f67;
+}

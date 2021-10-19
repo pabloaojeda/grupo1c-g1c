@@ -1,0 +1,39 @@
+h2 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 96px;
+  width: 35vw;
+  color: #000000;
+}
+
+a {
+  background: #226597;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+  color: #ffffff;
+  border-radius: 5rem;
+  text-decoration: none;
+  /* identical to box height */
+}
+
+p {
+  width: 20vw;
+}
+
+img {
+  position: relative;
+  top: -10vh;
+  z-index: 1;
+  /* filter: brightness(1.1);
+  mix-blend-mode: multiply; */
+}
+
+.bloque-texto {
+  padding-left: 8vw;
+  margin-left: 5vw;
+}

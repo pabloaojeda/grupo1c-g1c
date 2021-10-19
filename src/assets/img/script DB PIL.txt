@@ -1,0 +1,76 @@
+CREATE TABLE [Provincia] (
+  [ID_Provincia] INT,
+  [Provincia] TEXT,
+  PRIMARY KEY ([ID_Provincia])
+);
+
+CREATE TABLE [Localidad] (
+  [ID_Localidad] INT,
+  [Localidad] TEXT,
+  [Codigo_Postal] VARCHAR(10),
+  [ID_Provincia] INT,
+  PRIMARY KEY ([ID_Localidad]),
+  CONSTRAINT [FK_Localidad.ID_Provincia]
+    FOREIGN KEY ([ID_Provincia])
+      REFERENCES [Provincia]([ID_Provincia])
+);
+
+CREATE TABLE [Cliente] (
+  [Cuit/Cuil] VARCHAR(12),
+  [Nombre] TEXT,
+  [Apellido] TEXT,
+  [Password] VARCHAR(15),
+  [Mail] TEXT,
+  [ID_Localidad] VARCHAR(5),
+  [Foto_Frontal] VARCHAR(MAX),
+  [DNI_delante] VARCHAR(MAX),
+  [DNI_detras] VARCHAR(MAX),
+  [Domicilio] TEXT,
+  PRIMARY KEY ([Cuit/Cuil]),
+  CONSTRAINT [FK_Cliente.ID_Localidad]
+    FOREIGN KEY ([ID_Localidad])
+      REFERENCES [Localidad]([ID_Localidad])
+);
+
+CREATE TABLE [Tipo_Cuenta] (
+  [ID_Tipo_Cuenta] INT,
+  [Tipo_Cuenta] TEXT,
+  PRIMARY KEY ([ID_Tipo_Cuenta])
+);
+
+CREATE TABLE [Cuenta] (
+  [ID_Cuenta] INT,
+  [Cuit/Cuil] VARCHAR(12),
+  [ID_Tipo_Cuenta] INT,
+  [ID_movimiento] INT,
+  PRIMARY KEY ([ID_Cuenta]),
+  CONSTRAINT [FK_Cuenta.Cuit/Cuil]
+    FOREIGN KEY ([Cuit/Cuil])
+      REFERENCES [Cliente]([Cuit/Cuil]),
+  CONSTRAINT [FK_Cuenta.ID_Tipo_Cuenta]
+    FOREIGN KEY ([ID_Tipo_Cuenta])
+      REFERENCES [Tipo_Cuenta]([ID_Tipo_Cuenta])
+);
+
+CREATE TABLE [Tipo_Movimientos] (
+  [ID_tipo_Movimiento] INT,
+  [Tipo_Movimiento] TEXT,
+  PRIMARY KEY ([ID_tipo_Movimiento])
+);
+
+CREATE TABLE [Movimientos] (
+  [ID_movimiento] INT,
+  [ID_tipo_Movimiento] INT,
+  [Descripción] TEXT,
+  [Fecha_Hora] DATETIME,
+  [Monto] DECIMAL(12,2),
+  [ID_cuenta_origen] INT,
+  [ID_cuenta_final] INT,
+  PRIMARY KEY ([ID_movimiento]),
+  CONSTRAINT [FK_Movimientos.ID_movimiento]
+    FOREIGN KEY ([ID_movimiento])
+      REFERENCES [Movimientos]([ID_movimiento]),
+  CONSTRAINT [FK_Movimientos.ID_tipo_Movimiento]
+    FOREIGN KEY ([ID_tipo_Movimiento])
+      REFERENCES [Tipo_Movimientos]([ID_tipo_Movimiento])
+);

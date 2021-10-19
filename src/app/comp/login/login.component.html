@@ -1,0 +1,95 @@
+<div class="padre col-4 mx-auto mt-5 mb-1">
+  <div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLabel">INICIAR SESION</h5>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="modal"
+      aria-label="Close"
+      routerLink=""
+    ></button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <!-- (ngSubmit)="onEnviar($event)" -->
+      <div class="form-group my-3 py-2">
+        <div class="input-group">
+          <div class="form-floating col">
+            <input
+              type="email"
+              class="form-control"
+              [formControl]="mail"
+              id="floatingEmail"
+              placeholder="Email"
+              value="ejemplo@gmail.com"
+            />
+            <label for="floatingEmail">Ingrese su dirección de e-mail</label>
+          </div>
+        </div>
+        <div
+          *ngIf="mailField.invalid && (mailField.dirty || mailField.touched)"
+          class="text-danger"
+        >
+          <small *ngIf="mailField.hasError('pattern')"> Email no valido </small>
+          <small *ngIf="passwordField.hasError('required')">
+            Debe ingresar una dirección de e-mail
+          </small>
+        </div>
+      </div>
+
+      <div class="form-group my-3 py-2">
+        <div class="input-group">
+          <div class="form-floating col">
+            <input
+              type="password"
+              class="form-control"
+              [formControl]="password"
+              id="floatingEmail"
+              placeholder="Contraseña"
+              value="ejemplo@gmail.com"
+            />
+            <label for="floatingEmail">Ingrese su contraseña</label>
+          </div>
+        </div>
+        <div
+          class="p-3"
+          *ngIf="
+            passwordField.invalid &&
+            (passwordField.dirty || passwordField.touched)
+          "
+          class="text-danger"
+        >
+          <small *ngIf="passwordField.hasError('pattern')">
+            La clave debe contener al menos una letra Mayuscula, una Minuscula y
+            un simbolo.
+          </small>
+          <small *ngIf="passwordField.hasError('minlength')">
+            El minimo de digitos requerido es 8.
+          </small>
+          <small *ngIf="passwordField.hasError('required')">
+            La contraseña es requerida.
+          </small>
+        </div>
+      </div>
+      <div class="col text-center py-4">
+        <div *ngIf="true">
+          <!-- routerLink="../movimientos" -->
+          <button
+            (click)="onEnviar()"
+            type="button"
+            class="btn btn-dark"
+            [disabled]="passwordField.invalid || mailField.invalid"
+          >
+            INGRESAR
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="col-4 mx-auto">
+  <img
+    class="makeitrain"
+    src="../../../assets/img/undraw_make_it_rain_iwk4.svg"
+  />
+</div>

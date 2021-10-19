@@ -1,0 +1,12 @@
+.navbar {
+  background: #226597;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.logoPequeño {
+  width: 3%;
+}
+
+.btn {
+  color: #ffff;
+}

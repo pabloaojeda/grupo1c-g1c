@@ -1,0 +1,75 @@
+<div class="col-8 mx-auto my-5">
+  <div class="row card border-4 p-3">
+    <div class="col mb-4">
+      <h4 class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text-muted">TRANSFERENCIA</span>
+        <span class="badge badge-secondary badge-pill">3</span>
+      </h4>
+      <ul class="list-group mb-3">
+        <li class="list-group-item d-flex justify-content-between">
+          <span>Saldo (AR$)</span>
+          <strong>{{balance}}</strong>
+        </li>
+      </ul>
+
+      <form class="card p-2">
+        <div class="input-group">
+          <span class="input-group-text">$</span>
+          <input type="number" [formControl]="monto" name="monto" min="0.00" max="100000000.00" step="0.01"
+            class="form-control" placeholder="$0,00" required />          
+        </div>
+        <div *ngIf="montofield.invalid && (montofield.dirty || montofield.touched)" class="text-danger">
+          <small *ngIf="montofield.hasError('pattern')"> Deben ser valores mayores a 1 </small>
+          <small *ngIf="montofield.hasError('required')"> Debe ingresar monto </small>
+        </div>
+      </form>
+      <hr class="mb-4" />
+      <h4 class="mb-3 text muted">Datos cuenta</h4>
+      <form class="needs-validation" novalidate>
+        <div class="row">
+          <div class="col mb-3">
+            <label for="firstName">Para:</label>
+            <input type="text" [formControl]="cvu" name="cvu" class="form-control" id="firstName"
+              placeholder="CBU/ALIAS" value="" required />
+            <div class="invalid-feedback">Valid first name is required.</div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="email">Email <span class="text-muted">(Opcional)</span></label>
+          <input type="email" class="form-control" id="email" placeholder="ejemplo@gmail.com" />
+          <div class="invalid-feedback">
+            El correo que ingreso no es valido.
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-5 mb-3">
+            <label for="country">Concepto</label>
+            <select class="custom-select d-block w-100 mt-2" [formControl]="concepto" name="concepto" id="country"
+              required>
+              <option value="">Elija una opcion...</option>
+              <option>Alquileres</option>
+              <option>Cuota</option>
+              <option>Expensas</option>
+              <option>Haberes</option>
+              <option>Prestamo</option>
+              <option>Varios</option>
+            </select>
+            <div class="invalid-feedback">Porfavor seleccione un concepto.</div>
+          </div>
+        </div>
+
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="same-address" />
+          <label class="custom-control-label ms-2" for="same-address">
+            ¿ Desea agendar la cuenta ?</label>
+        </div>
+
+        <button (click)="onEnviar()" class="btn btn-dark btn-lg btn-block my-3" type="submit" [disabled]="montofield.invalid" routerLink="../">
+          Confirmar
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
