@@ -1,12 +1,5 @@
 # PilWallet
 
-<h1> IMPORTANTE, LEER ANTES DE DESCARGAR EL REPOSITORIO!! </h1>
-
-  <h2> Debido a problemas con el repositorio, la aplicación se realizo en el siguiente link! 
-
-
-
-   <a href="https://github.com/MatGP20/PilMoney1C">Repositorio Github</a>
   </h2>
 
    <p> El grupo 1C esta comformado por :
